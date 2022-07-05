@@ -1,0 +1,143 @@
+/* Lista de Articulos */
+
+/* Aplicando Grid a Noticias y Reviews*/
+
+.grid-articulos {
+    display: grid;
+    gap: 5px;
+    grid-column: 1fr;
+    grid-row: 3, 1fr;
+    grid-template-areas: 
+    ' header   header   header '
+    ' noticia  noticia  aside '
+    ' noticia  noticia  aside '
+    ' noticia  noticia  aside '
+    ' footer   footer   footer';
+    }
+  
+  #noticias {
+    background-color: #4f4d6f;
+    display: grid;
+    grid-area: noticia;
+    justify-content: center;
+    align-items: center;
+    }
+  
+  .noticias__lista {
+    list-style-type: none;
+    padding-left: 0%;
+    }
+  
+  .noticias__lista__item {
+    border-radius: 4px 4px 4px 4px;
+    margin: 2%;
+    padding: 2%;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #345bb3;
+  }
+  
+  .noticias__lista__item:hover {
+    color:#017bab;
+    background-color:aliceblue;
+  }
+  
+  .noticias__lista__item__foto {
+    width: 50%;
+    height: auto;
+  
+  }
+  
+  #aside {
+    display: flex;
+    justify-content: center;
+    background-color: #4f4d6f;
+    display: grid;
+    grid-area: aside;
+  }
+  
+  .aside__foto {
+    margin-top: 1%;
+    padding: 5%;
+  }
+  
+  .aside__foto__item {
+    border-radius: 4px 4px 4px 4px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Detalle de Articulos */
+  
+  h1 {
+    text-align: center;
+    margin: 5px 20px 5px 20px;
+    font-size: 2.5vw;
+  }
+  
+  h2 {
+    text-align: left;
+    margin: 10px 20px 10px 20px;
+    font-size: 2vw;
+  }
+  
+  h3 {
+    text-align: justify;
+    margin: 20px 40px 20px 40px;
+    font-size: 1.5vw;
+  }
+  
+  h4 {
+    text-align: center;
+    font-size: 2vw;
+  }
+  
+  h5 {
+    text-align: center;
+    margin-top: 1%;
+    font: 1vw;
+  }
+  
+  #articulo {
+    background-color: #4f4d6f;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 2%;
+  }
+  
+  .articulo {
+    margin: 2%; 
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .articulo__parrafo {
+    color: white;
+  }
+  
+  .articulo__video {
+    text-align: center;
+    margin: 20px 40px 20px 40px;
+  }
+  
+  .articulo__foto{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    margin: 2%; 
+    padding: 2%;
+  }
+  
+  .articulo__foto__item {
+    max-width: 100%;
+    height: auto;
+  }

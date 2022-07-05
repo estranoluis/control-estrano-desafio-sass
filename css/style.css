@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Nesting */
 * {
   padding: 0;
   margin: 0;
@@ -193,6 +194,7 @@
   font-size: 100%;
 }
 
+/* Home */
 /* Slide de fotos con animación con bootstrap */
 #carouselFade {
   width: inherit;
@@ -1277,7 +1279,7 @@ span {
   color: white;
 }
 
-/* Pie de Página*/
+/* Footer */
 #footer {
   grid-area: footer;
 }
