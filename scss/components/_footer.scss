@@ -4,7 +4,7 @@
     grid-area: footer;
   }
   
-  footer .main-footer{  padding: 20px 0;  background-color: #345bb3;}
+  footer .main-footer {  padding: 20px 0;  background-color: $bg-home;}
   footer ul{  padding-left: 0;  list-style: none;}
   
   /* Copy Right Footer */
@@ -89,6 +89,13 @@
       padding: 9px;
       border-radius: 5px;
   }
+
+  .fa:hover {
+    transition: all 0.5s;
+    transform: scale(1.5);
+    background-color: $bg-btn;
+    color: white;
+  }
   
   #subscribe-box .emailfield {
       margin: auto;
@@ -123,6 +130,13 @@
       padding: 10px 15px;
       margin-bottom: 16px;
       border-radius: 5px;
+  }
+
+  input.submitbutton.ripplelink:hover {
+    background-color: white;
+    color: $bg-home;
+    font-weight: 100;
+
   }
   
   .thumb-content ::before {
