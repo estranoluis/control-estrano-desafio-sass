@@ -1,7 +1,7 @@
 /* Header */
 
 #cabecera {
-    background-color: #345bb3;
+    background-color: $bg-home;
     background-size: cover;
     display: grid;
     grid-area: header;
@@ -60,14 +60,14 @@
   }
   
   .dropdown-item, .navbar-toggler  {
-    color:#345bb3;
+    color:$bg-home;
     font-weight: bold;
     font-size: 100%;
   }
   
   .btn{
     color:white;
-    background-color: #209bf1;
+    background-color: $bg-home;
     border-color: #0a7bcb;
     font-weight: bold;
     font-size: 100%;

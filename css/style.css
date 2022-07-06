@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Nesting */
+/* Nesting */ /* Variables */
 * {
   padding: 0;
   margin: 0;
@@ -188,7 +188,7 @@
 
 .btn {
   color: white;
-  background-color: #209bf1;
+  background-color: #345bb3;
   border-color: #0a7bcb;
   font-weight: bold;
   font-size: 100%;
@@ -424,6 +424,313 @@
 
 /* Formulario inicio de sesion */
 /* Aplicando Grid a Cuenta y Sesión */
+.login {
+  background-color: #4f4d6f;
+  padding: 3% 5% 3% 5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  justify-content: center;
+}
+
+.form-container {
+  background-color: #0a7bcb;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px -15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.form-container:before,
+.form-container:after {
+  content: "";
+  background-color: #f7668e;
+  height: 50%;
+  width: 4px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.form-container:after {
+  top: auto;
+  bottom: 10px;
+  left: auto;
+  right: 10px;
+}
+
+.form-container .title {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+
+.form-container .social-links {
+  padding: 0;
+  margin: 0 0 15px;
+  list-style: none;
+}
+
+.form-container .social-links li {
+  display: inline-block;
+  margin: 0 3px;
+}
+
+.form-container .social-links li a {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  line-height: 27px;
+  height: 28px;
+  width: 28px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.form-container .social-links li a:hover {
+  color: #209bf1;
+  background-color: white;
+}
+
+.form-container .description {
+  color: white;
+  font-size: 13px;
+  margin: 0 0 10px;
+  display: block;
+}
+
+.form-horizontal .form-group {
+  margin: 0 0 15px;
+}
+
+.form-horizontal .form-group:last-of-type {
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.form-horizontal .form-control {
+  color: #209bf1;
+  background: #235489;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 40px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 2px solid #F2F5F6;
+  box-shadow: none;
+}
+
+.form-horizontal .form-control:focus {
+  border-color: rgba(78, 76, 151, 0.5);
+  box-shadow: none;
+}
+
+.form-horizontal .form-control::placeholder {
+  color: #e1e1e1;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form-horizontal .form-group .check-label {
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+  margin: -2.5px 0 0;
+  vertical-align: text-top;
+  display: inline-block;
+}
+
+.form-horizontal .form-group .check-label a {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.form-horizontal .form-group .check-label a:hover {
+  text-decoration: underline;
+}
+
+.form-horizontal .checkbox {
+  height: 17px;
+  width: 17px;
+  min-height: auto;
+  margin: 0 3px 0 0;
+  border: 1px solid #999;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  transition: all 0.3s ease;
+}
+
+.form-horizontal .checkbox:before {
+  content: "";
+  height: 6px;
+  width: 12px;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  opacity: 1;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 2px;
+  top: 2.5px;
+  transition: all 0.3s ease;
+}
+
+.form-horizontal .checkbox:checked {
+  background-color: #4E4C97;
+  border-color: #4E4C97;
+}
+
+.form-horizontal .checkbox:checked:before {
+  opacity: 1;
+}
+
+.form-horizontal .checkbox:not(:checked):before {
+  opacity: 0;
+}
+
+.form-horizontal .checkbox:focus {
+  outline: none;
+}
+
+.form-horizontal .btn {
+  color: #fff;
+  background-color: #4E4C97;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  width: 130px;
+  padding: 11px;
+  margin: 0 10px 10px 0;
+  border: 2px solid #4E4C97;
+  border-radius: 15px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+
+.form-horizontal .btn.signin {
+  color: #4E4C97;
+  background-color: #fff;
+}
+
+.form-horizontal .btn:hover,
+.form-horizontal .btn:focus {
+  color: #4E4C97;
+  background-color: #fff;
+  box-shadow: 0 0 5px #4E4C97, 0 0 15px #4E4C97 inset;
+}
+
+.form-horizontal .btn.signin:hover,
+.form-horizontal .btn.signin:focus {
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px #4E4C97;
+}
+
+.grid-cuenta {
+  display: grid;
+  gap: 10px;
+  grid-column: 1fr;
+  grid-row: 3fr;
+  grid-template-areas: "   header  header  header " "   cuenta cuenta cuenta " " footer   footer    footer";
+}
+
+/* Ejemplo de posible formulario */
+/* #form {
+
+  padding: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: #4f4d6f;
+  width: 100% ;
+  height: auto;
+}
+
+.controls {
+    width: 100%;
+    border: 1px solid #017bab;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #3f3b3b;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+.buttons {
+    width: 100%;
+    height: 40px;
+    background: #017bab;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+.form-register {
+    width: 400px;
+    height: 450px;
+    background: #3a6bb0;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 40px;
+    border-top: 4px solid #0e5571;
+    color: rgb(231, 212, 212);
+  }
+
+.form-register h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+  }
+
+.controls {
+    width: 100%;
+    border: 1px solid #017bab;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #3f3b3b;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+.buttons {
+    width: 100%;
+    height: 40px;
+    background: #017bab;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+  }
+
+.form-register a {
+    color: rgb(224, 215, 215);
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+.form-register a:hover {
+    text-decoration: underline;
+  } */
+/* Ejemplo de otro posible Formumlario */
 /* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
 .containerLogin {
@@ -702,309 +1009,6 @@ h6 span {
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 } */
-.login {
-  background-color: #4f4d6f;
-  padding: 3% 5% 3% 5%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  justify-content: center;
-}
-
-.form-container {
-  background-color: #0a7bcb;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  padding: 30px 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 25px -15px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-.form-container:before,
-.form-container:after {
-  content: "";
-  background-color: #4E4C97;
-  height: 50%;
-  width: 4px;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-}
-
-.form-container:after {
-  top: auto;
-  bottom: 10px;
-  left: auto;
-  right: 10px;
-}
-
-.form-container .title {
-  text-align: center;
-  color: white;
-  font-size: 25px;
-  font-weight: 700;
-  margin: 0 0 15px;
-}
-
-.form-container .social-links {
-  padding: 0;
-  margin: 0 0 15px;
-  list-style: none;
-}
-
-.form-container .social-links li {
-  display: inline-block;
-  margin: 0 3px;
-}
-
-.form-container .social-links li a {
-  color: white;
-  line-height: 27px;
-  height: 28px;
-  width: 28px;
-  border: 1px solid white;
-  border-radius: 50%;
-  display: block;
-  transition: all 0.3s ease 0s;
-}
-
-.form-container .social-links li a:hover {
-  color: #209bf1;
-  background-color: white;
-}
-
-.form-container .description {
-  color: white;
-  font-size: 13px;
-  margin: 0 0 10px;
-  display: block;
-}
-
-.form-horizontal .form-group {
-  margin: 0 0 15px;
-}
-
-.form-horizontal .form-group:last-of-type {
-  text-align: left;
-  margin-bottom: 35px;
-}
-
-.form-horizontal .form-control {
-  color: #209bf1;
-  background: #235489;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  height: 40px;
-  padding: 6px 12px;
-  border-radius: 5px;
-  border: 2px solid #F2F5F6;
-  box-shadow: none;
-}
-
-.form-horizontal .form-control:focus {
-  border-color: rgba(78, 76, 151, 0.5);
-  box-shadow: none;
-}
-
-.form-horizontal .form-control::placeholder {
-  color: #e1e1e1;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.form-horizontal .form-group .check-label {
-  color: white;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: none;
-  margin: -2.5px 0 0;
-  vertical-align: text-top;
-  display: inline-block;
-}
-
-.form-horizontal .form-group .check-label a {
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.form-horizontal .form-group .check-label a:hover {
-  text-decoration: underline;
-}
-
-.form-horizontal .checkbox {
-  height: 17px;
-  width: 17px;
-  min-height: auto;
-  margin: 0 3px 0 0;
-  border: 1px solid #999;
-  border-radius: 2px;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  transition: all 0.3s ease;
-}
-
-.form-horizontal .checkbox:before {
-  content: "";
-  height: 6px;
-  width: 12px;
-  border-bottom: 2px solid #fff;
-  border-left: 2px solid #fff;
-  opacity: 1;
-  transform: rotate(-45deg);
-  position: absolute;
-  left: 2px;
-  top: 2.5px;
-  transition: all 0.3s ease;
-}
-
-.form-horizontal .checkbox:checked {
-  background-color: #4E4C97;
-  border-color: #4E4C97;
-}
-
-.form-horizontal .checkbox:checked:before {
-  opacity: 1;
-}
-
-.form-horizontal .checkbox:not(:checked):before {
-  opacity: 0;
-}
-
-.form-horizontal .checkbox:focus {
-  outline: none;
-}
-
-.form-horizontal .btn {
-  color: #fff;
-  background-color: #4E4C97;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: capitalize;
-  width: 130px;
-  padding: 11px;
-  margin: 0 10px 10px 0;
-  border: 2px solid #4E4C97;
-  border-radius: 15px;
-  display: inline-block;
-  transition: all 0.3s ease 0s;
-}
-
-.form-horizontal .btn.signin {
-  color: #4E4C97;
-  background-color: #fff;
-}
-
-.form-horizontal .btn:hover,
-.form-horizontal .btn:focus {
-  color: #4E4C97;
-  background-color: #fff;
-  box-shadow: 0 0 5px #4E4C97, 0 0 15px #4E4C97 inset;
-}
-
-.form-horizontal .btn.signin:hover,
-.form-horizontal .btn.signin:focus {
-  text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 5px #4E4C97;
-}
-
-.grid-cuenta {
-  display: grid;
-  gap: 10px;
-  grid-column: 1fr;
-  grid-row: 3fr;
-  grid-template-areas: "   header  header  header " "   cuenta cuenta cuenta " " footer   footer    footer";
-}
-
-/* #form {
-  padding: 2%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  background-color: #4f4d6f;
-  width: 100% ;
-  height: auto;
-}
-
-.controls {
-    width: 100%;
-    border: 1px solid #017bab;
-    margin-bottom: 15px;
-    padding: 11px 10px;
-    background: #3f3b3b;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
-.buttons {
-    width: 100%;
-    height: 40px;
-    background: #017bab;
-    border: none;
-    color: white;
-    margin-bottom: 16px;
-  }
-
-.form-register {
-    width: 400px;
-    height: 450px;
-    background: #3a6bb0;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    box-shadow: 7px 13px 37px #000;
-    padding: 20px 40px;
-    border-top: 4px solid #0e5571;
-    color: rgb(231, 212, 212);
-  }
-
-.form-register h5 {
-    margin: 0;
-    text-align: center;
-    height: 40px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid;
-    font-size: 20px;
-  }
-
-.controls {
-    width: 100%;
-    border: 1px solid #017bab;
-    margin-bottom: 15px;
-    padding: 11px 10px;
-    background: #3f3b3b;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
-.buttons {
-    width: 100%;
-    height: 40px;
-    background: #017bab;
-    border: none;
-    color: white;
-    margin-bottom: 16px;
-  }
-
-.form-register p {
-    height: 40px;
-    text-align: center;
-    border-bottom: 1px solid;
-  }
-
-.form-register a {
-    color: rgb(224, 215, 215);
-    text-decoration: none;
-    font-size: 14px;
-  }
-
-.form-register a:hover {
-    text-decoration: underline;
-  } */
 /* Lista de Articulos */
 /* Aplicando Grid a Noticias y Reviews*/
 .grid-articulos {
@@ -1522,6 +1526,13 @@ ul.social-footer2 li a {
   border-radius: 5px;
 }
 
+.fa:hover {
+  transition: all 0.5s;
+  transform: scale(1.5);
+  background-color: #e67e22;
+  color: white;
+}
+
 #subscribe-box .emailfield {
   margin: auto;
 }
@@ -1555,6 +1566,12 @@ input.submitbutton.ripplelink {
   padding: 10px 15px;
   margin-bottom: 16px;
   border-radius: 5px;
+}
+
+input.submitbutton.ripplelink:hover {
+  background-color: white;
+  color: #345bb3;
+  font-weight: 100;
 }
 
 .thumb-content ::before {

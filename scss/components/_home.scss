@@ -174,7 +174,7 @@
   /* Articulos home */
   
   #portada {
-    background-color: #4f4d6f;
+    background-color: $bg-content;
     max-width: 100%;
     height: auto;
     display: grid;
@@ -192,13 +192,13 @@
     border-radius: 4px 4px 4px 4px;
     max-width: 100%;
     height: auto;
-    background-color: #4f4d6f;
+    background-color: $bg-content;
   }
   
   /* Sidebar home */
   
   #side {
-    background-color: #4f4d6f;
+    background-color: $bg-content;
     display: grid;
     grid-area: side;
   }
@@ -219,7 +219,7 @@
   /* banner home */
   
   #banner {
-    background-color: #4f4d6f;
+    background-color: $bg-content;
     display: grid;
     grid-area: banner;
   }
