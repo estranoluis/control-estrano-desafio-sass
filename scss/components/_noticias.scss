@@ -37,17 +37,19 @@
     display: flex;
     flex-direction: row-reverse;
     background-color: $bg-home;
+    transition: all 0.5s;
   }
   
   .noticias__lista__item:hover {
     color:#017bab;
     background-color:aliceblue;
+    transition: all 0.5s;
+    transform: scale(1.04);
   }
   
   .noticias__lista__item__foto {
     width: 50%;
     height: auto;
-  
   }
   
   #aside {
