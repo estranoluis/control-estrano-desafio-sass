@@ -10,7 +10,7 @@
   font-family: arial;
   background-color: #209bf1;
   margin: auto;
-  width: 80%;
+  width: 75%;
   /*Posible paleta de colores: #f7668e  #345bb3  #d3d0d7  #0a0a16  #209bf1  #2bdad1  #6f4f8f  #4f4d6f  */
 }
 
@@ -117,6 +117,14 @@
   .grid-home .cuerpo__parrafo__item:hover {
     font-size: xx-large;
     color: rgb(187, 191, 72);
+  }
+  .grid-home .boton-compra-item:hover {
+    color: rgb(187, 191, 72);
+    transition: all 0.5s;
+    transform: scale(1.04);
+  }
+  .grid-home #footer {
+    grid-column: 1/-1;
   }
 }
 /* Header */
@@ -381,6 +389,11 @@
   max-width: 100%;
   height: auto;
   background-color: #4f4d6f;
+}
+
+.portada__foto__item:hover {
+  transition: all 0.5s;
+  transform: scale(1.04);
 }
 
 /* Sidebar home */
@@ -1041,11 +1054,14 @@ h6 span {
   display: flex;
   flex-direction: row-reverse;
   background-color: #345bb3;
+  transition: all 0.5s;
 }
 
 .noticias__lista__item:hover {
   color: #017bab;
   background-color: aliceblue;
+  transition: all 0.5s;
+  transform: scale(1.04);
 }
 
 .noticias__lista__item__foto {

@@ -8,7 +8,7 @@
   font-family: arial;
   background-color: $bg-page;
   margin: auto;
-  width: 80%;
+  width: 75%;
   /*Posible paleta de colores: #f7668e  #345bb3  #d3d0d7  #0a0a16  #209bf1  #2bdad1  #6f4f8f  #4f4d6f  */
   }
   
@@ -146,5 +146,16 @@
     font-size: xx-large;
     color: rgb(187, 191, 72);
   }
+
+  .grid-home .boton-compra-item:hover {
+
+    color: rgb(187, 191, 72);
+    transition: all 0.5s;
+    transform: scale(1.04);
+  }
   
+  .grid-home #footer {
+    grid-column: 1/-1;
+  }
+
   }
