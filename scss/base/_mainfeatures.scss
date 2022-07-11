@@ -125,6 +125,31 @@
           display: none;
         }
       }
+      .grid-noticias {
+        #articulo{
+          grid-column: 1/-1;
+          .articulo {
+            margin: 1%;
+            h1 {
+              font-size: large;
+              padding: 2%;
+            }
+            h2 {
+              font-size: medium;
+            }    
+            h3 {
+              font-size: medium;
+              padding: 1%;
+              margin: 3%;
+            }  
+          } 
+          .articulo-foto {
+            padding: 1%;
+            margin: 0%;
+          } 
+        }
+      }
+
     @media screen and (max-width: 378px) {
       .grid-home {
         #cuerpo {
@@ -181,6 +206,30 @@
               }
             }
           }
+        }
+      }
+      .grid-noticias {
+        #articulo{
+          grid-column: 1/-1;
+          .articulo {
+            margin: 1%;
+            h1 {
+              font-size: medium;
+              padding: 2%;
+            }
+            h2 {
+              font-size: small;
+            }    
+            h3 {
+              font-size: small;
+              padding: 1%;
+              margin: 3%;
+            }  
+          } 
+          .articulo-foto {
+            padding: 1%;
+            margin: 0%;
+          } 
         }
       }
     }

@@ -42,17 +42,25 @@
       color: white;
       font-weight: bold;
       font-size: 100%;
+      &:hover {
+        color: rgb(153, 153, 153);
+      }
     }
   .dropdown-item, .navbar-toggler  {
     color:$bg-home;
     font-weight: bold;
     font-size: 100%;   
-    .btn{
-      color:white;
-      background-color: $bg-home;
-      border-color: #0a7bcb;
-      font-weight: bold;
-      font-size: 100%;
+  }
+  .btn{
+    color:white;
+    background-color: $bg-detail;
+    border-color: orange;
+    font-weight: bold;
+    font-size: 100%;
+    &:hover {
+      color: $bg-page;
+      background-color: white;
+      border-color: $bg-page;
     }
   }
 }
