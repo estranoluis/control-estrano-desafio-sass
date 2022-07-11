@@ -92,152 +92,155 @@
   } */
   
   /* Publicidad con video y enlace a compra */
-  
+.grid-home {
   #cuerpo {
-  
+    margin-top: 1%;
     max-width: 100%;
     height: auto;
     display: grid;
     grid-area: publi;
-  }
-  
-  .cuerpo {
-    background-image: url(../multimedia/images/eldenwall.jpg);
-    background-size: cover;
-    color: rgb(202, 198, 198);
-    border: solid thick rgb(84, 78, 47);
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .cuerpo__logo{
-    text-align: center;
-  }
-  
-  .cuerpo__parrafo {
-    font-family: 'Bebas Neue';
-    text-align: center;
-    margin: 0% 1% 0% 1%;
-  }
-  
-  .cuerpo__parrafo__titulo {
-    font-size: xx-large;
-  }
-  
-  .cuerpo__parrafo__texto {
-    font-size: large;
-  }
-  
-  .cuerpo__parrafo__item {
-    font-size: xx-large;
-    line-height: 30px;
-    font-family: 'Bebas Neue';
-    text-align: center;
-    text-decoration: none;
-    margin: 0% 1% 0% 1%;
-    padding: 1% 0% 1% 0%;
-    color: rgb(202, 198, 198);
-  }
-  
-  .cuerpo__parrafo__item:hover {
-    color: rgb(187, 191, 72);
-    animation: compra 0.5s  0s 0.5 normal forwards;
-  }
-  
-  @keyframes compra {
-    0% {
-      transform: scale(1);
+    .cuerpo {
+      background-image: url(../multimedia/images/eldenwall.jpg);
+      background-size: cover;
+      color: rgb(202, 198, 198);
+      border: solid thick rgb(84, 78, 47);
+      max-width: 100%;
+      height: auto;
+      text-align: center;
+      font-family: 'Bebas Neue';
+      text-decoration: none;
+      padding: 1%;
+      video {
+        max-width: 100%;
+        height: auto;
+        padding: 2%;
+      }
+      img {
+        height: auto;
+        width: 20rem;
+      }
+      h2 {
+        font-size: xx-large;
+        text-align: center;
+      }
+      h5 {
+        font-size: large;
+        text-justify: auto;
+      }
+      a {
+        font-size: xx-large;
+        line-height: 30px;
+        font-family: 'Bebas Neue';
+        text-align: center;
+        text-decoration: none;
+        margin: 0% 1% 0% 1%;
+        padding: 1% 0% 1% 0%;
+        color: rgb(202, 198, 198);
+        &:hover{
+          color: rgb(187, 191, 72);
+          animation: compra 0.5s  0s 0.5 normal forwards;
+        }
+      }
+      
+      @keyframes compra {
+        0% {
+          transform: scale(1);
+        }
+      
+        100% {
+          transform: scale(1.1);
+        }
+      }
+      .boton-compra {
+        display: none;
+      }
     }
-  
-    100% {
-      transform: scale(1.1);
-    }
   }
-  
-  .boton-compra {
-    display: none;
-  }
-  
-  .cuerpo__video {
-    display: flex;
-    justify-content: center;
-    margin: 1%;
-    padding: 1%;
-  }
-  
-  .cuerpo__video__item {
-    max-width: 100%;
-    height: auto;
-    margin: 2%;
-  }
-  
-  /* Articulos home */
-  
+
+  /* Noticias Relevantes Home */
+
   #portada {
-    background-color: $bg-content;
     max-width: 100%;
     height: auto;
     display: grid;
     grid-area: articulo;
-  }
-  
-  .portada__foto{
-    margin-top: 1%;
-    padding: 2%;
-    width: 100%;
-    height: auto;
-  }
-  
-  .portada__foto__item {
-    border-radius: 4px 4px 4px 4px;
-    max-width: 100%;
-    height: auto;
-    background-color: $bg-content;
+    .portada {
+      background-color: $bg-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      border-radius: 4px 4px 4px 4px;
+      padding: 2%;
+      img {
+        border-radius: 4px 4px 4px 4px;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        height: auto;
+        &:hover {
+          transition: all 0.5s;
+          transform: scale(1.04);
+        }
+      }
+    }
   }
 
-  .portada__foto__item:hover {
-    transition: all 0.5s;
-    transform: scale(1.04);
-  }
-  
   /* Sidebar home */
-  
+
   #side {
     background-color: $bg-content;
     display: grid;
     grid-area: side;
-  }
-  
-  .side__foto {
-    margin-top: 1%;
-    padding: 5%;
-    width: 100%;
-    height: auto;
-  }
-  
-  .side__foto__item {
     border-radius: 4px 4px 4px 4px;
-    max-width: 100%;
-    height: auto;
+    .side {
+      border-radius: 4px 4px 4px 4px;
+      padding: 18.6% 5% 18.6% 5%;
+      img {
+        border-radius: 4px 4px 4px 4px;
+        max-width: 100%;
+        height: auto;
+        &:hover {
+          transition: all 0.5s;
+          transform: scale(1.04);
+        }
+      }
+    }  
   }
 
-  
-  /* banner home */
-  
   #banner {
-    background-color: $bg-content;
     display: grid;
     grid-area: banner;
-  }
-  
-  .banner__foto {
-    padding: 2%;
-    width: 100%;
-    height: auto;
-  }
-  
-  .banner__foto__item {
+    background-color: $bg-content;
     border-radius: 4px 4px 4px 4px;
-    max-width: 100%;
-    height: auto;
+    .banner {
+      border-radius: 4px 4px 4px 4px;
+      background-color: $bg-content;
+      a {
+        display: flex;
+        flex-direction: row-reverse;
+        text-decoration: none;
+        color: white;
+        padding: 2% 2% 2% 6%;
+        h2 {
+          padding:2%;
+        }
+        img {
+          max-width: auto;
+          height: 100%;
+          padding:2%;
+          border-radius: 4px 4px 4px 4px;
+        }
+      }
+      &:hover {
+        background-color: white;
+        transition: all 0.5s;
+        transform: scale(1.04);
+        a{
+          color:#017bab;
+          transition: all 0.5s;
+          transform: scale(1.04);
+        }
+      }
+    }
   }
+}
