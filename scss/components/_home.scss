@@ -93,6 +93,19 @@
   
   /* Publicidad con video y enlace a compra */
 .grid-home {
+  display: grid;
+  gap: 2px;
+  grid-column: 1fr;
+  grid-row: 8, 1fr;
+  grid-template-areas: 
+  '   header  header  header'
+  '   slider  slider  slider'
+  '   publi   publi    publi'
+  ' articulo articulo   side '
+  ' articulo articulo   side   '
+  ' articulo articulo   side '
+  ' banner   banner    banner'
+  ' footer   footer    footer';   
   #cuerpo {
     margin-top: 1%;
     max-width: 100%;
@@ -220,14 +233,14 @@
         flex-direction: row-reverse;
         text-decoration: none;
         color: white;
-        padding: 2% 2% 2% 6%;
         h2 {
           padding:2%;
+          font-size: large auto;
         }
         img {
           max-width: auto;
           height: 100%;
-          padding:2%;
+          padding: 2% 2% 2% 4%;
           border-radius: 4px 4px 4px 4px;
         }
       }
