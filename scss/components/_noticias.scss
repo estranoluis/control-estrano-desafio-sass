@@ -17,7 +17,7 @@
       display: grid;
       grid-area: noticia;
       ul {
-        background-color: $bg-content;
+        background: map-get($standard, content-standard);
         padding: 3%;
         li {
           background-color: $bg-home;
@@ -25,23 +25,22 @@
           border-radius: 4px 4px 4px 4px;
           margin: 2%;
           a {
-            display: flex;
+            display: map-get($standard, flexbox-standard);
             flex-direction: row-reverse;
             color: white;
             text-decoration: none;
-            border-radius: 4px 4px 4px 4px;
+            border-radius: map-get($standard, border-standard);
             &:hover {
               color:#017bab;
               background-color:aliceblue;
-              transition: all 0.5s;
-              transform: scale(1.04);
-              border-radius: 4px 4px 4px 4px;
+              @extend %hover;
+              border-radius: map-get($standard, border-standard);
             }
             img {
               padding: 2%;
               width: 45%;
               height:auto;
-              border-radius: 4px 4px 4px 4px;
+              border-radius: map-get($standard, border-standard);
             }
             h2 {
               font-size: 120%;
@@ -61,13 +60,12 @@
         padding: 11.5% 2% 11.5% 2%;
         li {
           list-style-type: none;
-          border-radius: 4px 4px 4px 4px;
+          border-radius: map-get($standard, border-standard);
           background-color: $bg-home;
           padding: 5%;
           img {
-            border-radius: 4px 4px 4px 4px;
-            max-width: 100%;
-            height: auto;
+            border-radius: map-get($standard, border-standard);
+            @extend %imagen;
           }
         }
       }
@@ -77,7 +75,7 @@
 .grid-noticias {
   #articulo {
     background-color: $bg-content;
-    border-radius: 4px 4px 4px 4px;
+    border-radius: map-get($standard, border-standard);
     margin-top: 1%;
     margin-bottom: 1%;
     padding: 2%;
@@ -90,7 +88,7 @@
             color: $bg-page;
             background-color: white;
             border-color: $bg-page;
-            border-radius: 4px 4px 4px 4px;
+            border-radius: map-get($standard, border-standard);
             margin: 2%;
           }
           h2 {
@@ -109,19 +107,15 @@
         text-align: center;
         margin: 20px 40px 20px 40px;
         img {
-          max-width: 80%;
-          height: auto;
+          @extend %imagen;
           padding: 1%;
         }
       }
       .articulo-video {
-        max-width: 100%;
-        height: auto;
         text-align: center;
         video {
           padding: 2%;
-          width: 100%;
-          height: auto;
+          @extend %imagen;
         }
       }
   }

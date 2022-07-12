@@ -23,7 +23,7 @@
     .typo-light div,
     .typo-light span,
     .typo-light small {  
-      color: #fff;
+      color: $font-color;
     }
     .main-footer { 
       background-color: $bg-home;
@@ -33,7 +33,7 @@
         margin-left: 25%;
           a {
             text-decoration: none;
-            color: white;
+            color: $font-color;
             &:hover {
               color: #969696;
             }
@@ -59,10 +59,9 @@
       margin-bottom: 40px;
       .widget-title {
         margin-bottom: 20px;
-        text-align: justify;
-        font-size: medium;
+        @include texto (medium, justify);
         .widget-tittle-r {
-          display: flex;
+          display: map-get($standard, flexbox-standard);
           flex-direction: column;
           margin-top: 12%;
         }
@@ -95,20 +94,21 @@
         color: white;
       }
     }
-    #subscribe-box .emailfield {
-      margin: auto;
-    }
+    #subscribe-box {
+      .emailfield {
+        margin: auto;
+      }
+    } 
     input[type="text"] {
       background: rgba(255,255,255,0.075);
       padding: 10px 15px;
       color: #aaa;
       border: 3px solid rgba(0,0,0,0.1);
-      font-size: 14px;
+      @include texto (14px, center);
       margin-bottom: 16px;
       border-radius: 5px;
       transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
       transition-delay: 0.2s;
-      text-align: center;
       width: 100%;
     }
   
@@ -121,7 +121,6 @@
       transition-delay: 0s;
       width: 100%;
       font-size: 14px;
-      /* font-weight: 700; */
       border: 0px solid;
       transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
       padding: 10px 15px;
@@ -138,6 +137,7 @@
       color:#fff;
         &:hover, :focus, .active {
           background: #4b92dc;
+          font-weight: 600;
           color: #fff;
         }
     }
@@ -153,8 +153,7 @@
         margin-top: 5px;
         ul { 
           list-style: none;
-          margin: 0; 
-          padding: 0;
+          @include margen (0,0);
           li { 
             border-left: 1px solid #505050;
             display: inline-block;

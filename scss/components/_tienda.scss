@@ -7,7 +7,7 @@
     padding-bottom: 50px;
     padding-left: 1.5%;
     padding-right: 1.5%;
-    display: flex;
+    display: map-get($standard, flexbox-standard);
     flex-wrap: wrap;
     flex-direction: row;
   }
@@ -29,7 +29,7 @@
         100% {
             transform: scale(1.1);
         }
-    }
+      }
     }
     .product {
       height: 280px;
@@ -37,16 +37,14 @@
       .product-img {
         border-radius: 7px 7px 0px 0px;
         img {
-          width: 100%;
-          height: auto;
+          @extend %imagen;
         }
       }
       .product-info {
-        height: auto;
-        width: auto;
+        @extend %imagen;
         border-radius: 0px 0px 7px 7px;
-        background-color: $bg-home;
-        font-family: 'Open Sans', sans-serif;
+        background-color: map-get($standard, bg-standard);
+        font-family: $font-content;
         .product-text {
           height: 220px auto;
           width: 260px auto;
@@ -61,8 +59,7 @@
             padding: 1%;
           }
           h3 {
-            text-align: center;
-            font-size: 15px;
+            @include texto (15px, center);
             font-family: $font-content;
             font-weight: 4300;
             text-transform: uppercase;
