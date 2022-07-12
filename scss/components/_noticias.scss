@@ -29,6 +29,7 @@
             flex-direction: row-reverse;
             color: white;
             text-decoration: none;
+            border-radius: 4px 4px 4px 4px;
             &:hover {
               color:#017bab;
               background-color:aliceblue;
@@ -38,7 +39,7 @@
             }
             img {
               padding: 2%;
-              width: 60%;
+              width: 45%;
               height:auto;
               border-radius: 4px 4px 4px 4px;
             }
