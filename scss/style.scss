@@ -25,12 +25,14 @@
 
         /*Posible paleta de colores: #f7668e  #345bb3  #d3d0d7  #0a0a16  #209bf1  #2bdad1  #6f4f8f  #4f4d6f  */
         #cabecera, .slider, #footer {
-        animation: fading 1s ease-out;
-        @keyframes fading {
-            0%{opacity: 0;}
-            100%{opacity: 1;}
+            animation: fading 1s ease-out;
+            @keyframes fading {
+                0%{opacity: 0;}
+                100%{opacity: 1;}
+            }
         }
-        }
+
+        
 
         /* Media query */
 
@@ -38,6 +40,23 @@
         .grid-home {
             display: flex;
             flex-direction: column;
+            #cabecera {
+                .cabecera {
+                    .cabecera__logo {
+                        width: 50%;
+                        height: auto;
+                        left: 1%;
+                        margin-left: 12%;
+                        margin-top: 0;
+                    }
+                    .cabecera__background {
+                        width: 100%;
+                        height: auto;
+                }
+
+                }
+
+            }
             #carouselFade {
             grid-column: 1/-1;
             display: none;
