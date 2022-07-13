@@ -32,7 +32,6 @@
     .cuerpo {
       background-image: url(../multimedia/images/eldenwall.jpg);
       background-size: cover;
-      border-radius: map-get($standard, border-standard);
       color: rgb(202, 198, 198);
       border: solid thick rgb(84, 78, 47);
       @extend %imagen;
@@ -84,12 +83,12 @@
     @extend %imagen;
     display: grid;
     grid-area: articulo;
+    margin-top: 2%;
     .portada {
       background-color: map-get($standard, bg-standard);
       display: map-get($standard, flexbox-standard);
       flex-direction: column;
       justify-content: space-around;
-      border-radius: map-get($standard, border-standard);
       padding: 2%;
       img {
         border-radius: map-get($standard, border-standard);
@@ -107,7 +106,7 @@
     background-color: map-get($standard, bg-standard);
     display: grid;
     grid-area: side;
-    border-radius: map-get($standard, border-standard);
+    margin-top: 4%;
     .side {
       border-radius: map-get($standard, border-standard);
       padding: 18.6% 5% 18.6% 5%;
@@ -125,7 +124,7 @@
     display: grid;
     grid-area: banner;
     background-color: map-get($standard, bg-standard);
-    border-radius: 4px 4px 4px 4px;
+    margin: 1% 0 1% 0;
     .banner {
       border-radius: map-get($standard, border-standard);
       padding: 2%;
