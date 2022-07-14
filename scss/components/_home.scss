@@ -10,234 +10,147 @@
     grid-area: slider;
   }
   
-  /* Ejemplo de slide sin bootstrap */
-  /* .slider {
-    width: 100%;
-    height: auto;
-    margin-bottom:33%;
-    display: grid;
-    grid-area: slider;
-  }
-  
-  .slide-1, .slide-2, .slide-3, .slide-4, .slide-5 {
-    width: 75%;
-    resize: both;
-    height: auto;
-    position: absolute;
-  }
-  
-  .slide-1 {
-    animation: fade1 20s infinite;
-  }
-  
-  .slide-2 {
-    animation: fade2 20s infinite;
-  }
-  
-  .slide-3 {
-    animation: fade3 20s infinite;
-  }
-  
-  .slide-4 {
-    animation: fade4 20s infinite;
-  }
-  
-  .slide-5 {
-    animation: fade5 20s infinite;
-  }
-  
-  @keyframes fade1 {
-    0%{opacity: 1;}
-    20%{opacity: 0;}
-    40%{opacity: 0;}
-    60%{opacity: 0;}
-    80%{opacity: 0;}
-    100%{opacity: 1;}
-  }
-  
-  @keyframes fade2 {
-    0%{opacity: 0;}
-    20%{opacity: 1;}
-    40%{opacity: 0;}
-    60%{opacity: 0;}
-    80%{opacity: 0;}
-    100%{opacity: 0;}
-  }
-  
-  @keyframes fade3 {
-    0%{opacity: 0;}
-    20%{opacity: 0;}
-    40%{opacity: 1;}
-    60%{opacity: 0;}
-    80%{opacity: 0;}
-    100%{opacity: 0;}
-  }
-  
-  @keyframes fade4 {
-    0%{opacity: 0;}
-    20%{opacity: 0;}
-    40%{opacity: 0;}
-    60%{opacity: 1;}
-    80%{opacity: 0;}
-    100%{opacity: 0;}
-  }
-  
-  @keyframes fade5 {
-    0%{opacity: 0;}
-    20%{opacity: 0;}
-    40%{opacity: 0;}
-    60%{opacity: 0;}
-    80%{opacity: 1;}
-    100%{opacity: 0;}
-  } */
-  
   /* Publicidad con video y enlace a compra */
-  
+.grid-home {
+  display: grid;
+  grid-column: 1fr;
+  grid-row: 8, 1fr;
+  grid-template-areas: 
+  '   header  header  header'
+  '   slider  slider  slider'
+  '   publi   publi    publi'
+  ' articulo articulo   side '
+  ' articulo articulo   side   '
+  ' articulo articulo   side '
+  ' banner   banner    banner'
+  ' footer   footer    footer';   
   #cuerpo {
-  
-    max-width: 100%;
-    height: auto;
+    margin-top: 1%;
+    @extend %imagen;
     display: grid;
     grid-area: publi;
-  }
-  
-  .cuerpo {
-    background-image: url(../multimedia/images/eldenwall.jpg);
-    background-size: cover;
-    color: rgb(202, 198, 198);
-    border: solid thick rgb(84, 78, 47);
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .cuerpo__logo{
-    text-align: center;
-  }
-  
-  .cuerpo__parrafo {
-    font-family: 'Bebas Neue';
-    text-align: center;
-    margin: 0% 1% 0% 1%;
-  }
-  
-  .cuerpo__parrafo__titulo {
-    font-size: xx-large;
-  }
-  
-  .cuerpo__parrafo__texto {
-    font-size: large;
-  }
-  
-  .cuerpo__parrafo__item {
-    font-size: xx-large;
-    line-height: 30px;
-    font-family: 'Bebas Neue';
-    text-align: center;
-    text-decoration: none;
-    margin: 0% 1% 0% 1%;
-    padding: 1% 0% 1% 0%;
-    color: rgb(202, 198, 198);
-  }
-  
-  .cuerpo__parrafo__item:hover {
-    color: rgb(187, 191, 72);
-    animation: compra 0.5s  0s 0.5 normal forwards;
-  }
-  
-  @keyframes compra {
-    0% {
-      transform: scale(1);
-    }
-  
-    100% {
-      transform: scale(1.1);
+    .cuerpo {
+      background-image: url(../multimedia/images/eldenwall.jpg);
+      background-size: cover;
+      color: rgb(202, 198, 198);
+      border: solid thick rgb(84, 78, 47);
+      @extend %imagen;
+      text-align: center;
+      font-family: 'Bebas Neue';
+      text-decoration: none;
+      padding: 1%;
+      video {
+        @extend %imagen;
+        padding: 2%;
+      }
+      img {
+        height: auto;
+        width: 20rem;
+      }
+      h2 {
+        @include texto (xx-large, center);
+      }
+      h5 {
+        font-size: large;
+        text-justify: auto;
+      }
+      a {
+        @include texto (xx-large, center);
+        line-height: 30px;
+        font-family: 'Bebas Neue';
+        text-decoration: none;
+        @include margen (0% 1% 0% 1%, 1% 0% 1% 0%);
+        color: rgb(202, 198, 198);
+        &:hover{
+          color: rgb(187, 191, 72);
+          animation: compra 0.5s  0s 0.5 normal forwards;
+          @keyframes compra {
+            0% {
+              transform: scale(1);
+            }
+            100% {
+              transform: scale(1.1);
+            }
+          }
+        }
+      } 
     }
   }
-  
-  .boton-compra {
-    display: none;
-  }
-  
-  .cuerpo__video {
-    display: flex;
-    justify-content: center;
-    margin: 1%;
-    padding: 1%;
-  }
-  
-  .cuerpo__video__item {
-    max-width: 100%;
-    height: auto;
-    margin: 2%;
-  }
-  
-  /* Articulos home */
-  
+
+  /* Noticias Relevantes Home */
+
   #portada {
-    background-color: $bg-content;
-    max-width: 100%;
-    height: auto;
+    @extend %imagen;
     display: grid;
     grid-area: articulo;
-  }
-  
-  .portada__foto{
-    margin-top: 1%;
-    padding: 2%;
-    width: 100%;
-    height: auto;
-  }
-  
-  .portada__foto__item {
-    border-radius: 4px 4px 4px 4px;
-    max-width: 100%;
-    height: auto;
-    background-color: $bg-content;
+    margin-top: 2%;
+    .portada {
+      background-color: map-get($standard, bg-standard);
+      display: map-get($standard, flexbox-standard);
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 2%;
+      img {
+        border-radius: map-get($standard, border-standard);
+        @extend %imagen;
+        &:hover {
+          @extend %hover;
+        }
+      }
+    }
   }
 
-  .portada__foto__item:hover {
-    transition: all 0.5s;
-    transform: scale(1.04);
-  }
-  
   /* Sidebar home */
-  
+
   #side {
-    background-color: $bg-content;
+    background-color: map-get($standard, bg-standard);
     display: grid;
     grid-area: side;
-  }
-  
-  .side__foto {
-    margin-top: 1%;
-    padding: 5%;
-    width: 100%;
-    height: auto;
-  }
-  
-  .side__foto__item {
-    border-radius: 4px 4px 4px 4px;
-    max-width: 100%;
-    height: auto;
+    margin-top: 4%;
+    .side {
+      border-radius: map-get($standard, border-standard);
+      padding: 18.6% 5% 18.6% 5%;
+      img {
+        border-radius: map-get($standard, border-standard);
+        @extend %imagen;
+        &:hover {
+          @extend %hover;
+        }
+      }
+    }  
   }
 
-  
-  /* banner home */
-  
   #banner {
-    background-color: $bg-content;
     display: grid;
     grid-area: banner;
+    background-color: map-get($standard, bg-standard);
+    margin: 1% 0 1% 0;
+    .banner {
+      border-radius: map-get($standard, border-standard);
+      padding: 2%;
+      a {
+        display: map-get($standard, flexbox-standard);
+        flex-direction: row-reverse;
+        text-decoration: none;
+        color: white;
+        h2 {
+          padding:2%;
+          font-size: large auto;
+        }
+        img {
+          max-width: auto;
+          height: 100%;
+          padding: 2% 2% 2% 2%;
+          border-radius: map-get($standard, border-standard);
+        }
+      }
+      &:hover {
+        background-color: white;
+        @extend %hover;
+        a{
+          color:#017bab;
+        }
+      }
+    }
   }
-  
-  .banner__foto {
-    padding: 2%;
-    width: 100%;
-    height: auto;
-  }
-  
-  .banner__foto__item {
-    border-radius: 4px 4px 4px 4px;
-    max-width: 100%;
-    height: auto;
-  }
+}
